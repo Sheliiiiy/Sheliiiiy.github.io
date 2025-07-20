@@ -65,17 +65,29 @@
       .experiance ul li{
         font-size: 1rem;
         color: #666;
-        border: 1px solid #ccc;
+        border: 1px solid #d3c2d4a1;
         border-radius: 8px;
         padding: 1rem;
         margin: 0;
-        background-color: #fafafa;
+        background-color: #f2ebf2a1;
         margin-bottom: 1rem;
         text-align: center;
       }
       .experiance li small {
         font-size: 0.7rem;
         color: #999;
+      }
+      .experiance ul li .extra-info {
+        max-height: 0;
+        overflow: hidden;
+        margin-top: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+        opacity: 0;
+      }
+      .experiance ul li:hover .extra-info {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 1rem;
       }
       img {
         width: 100px;
@@ -150,41 +162,81 @@
           <ul>
             <li>
               <div><strong>Pros</strong></div>
-              <div>Implementation Consultant ||</div>
+              <div>Implementation Consultant Level 2</div>
               <div><small>April 2025 - present</small></div>
               <div>Implementation Consultant</div>
               <div><small>April 2023 - March 2025</small></div>
+              <div class="extra-info">
+                <p>Collaborated with clients to assess their specific business requirements and develop customized 
+                  smart CPQ solutions, resulting in streamlined sales processes and increased revenue generation. 
+                  Delivered expert guidance and training to clients, ensuring optimal utilization of smart CPQ 
+                  functionalities, best practices, and process optimization strategies, thereby maximizing the value 
+                  derived from their smart CPQ investment.</p>
+              </div>
             </li>
             <li>
               <div><strong>Amadeus</strong></div>
               <div>Java Trainee</div>
               <div><small>November 2022 - March 2023</small></div>
+              <div class="extra-info">
+                <p>I have been responsible for the design, development, modification, and debugging of programs.</p>
+              </div>
             </li>
             <li>
               <div><strong>TJX Europe</strong></div>
               <div>Associate</div>
               <div><small>May 2021 - May 2022</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: quality and quantity control over received stock (clothes, books, accessories, 
+                  kitchen gadgets, cosmetics etc.), as well as its unpacking and providing it with the corresponding 
+                  price tag and getting it ready for a store display. </p>
+              </div>
             </li>
             <li>
               <div><strong>UniCredit Bulbank</strong></div>
               <div>Specialist Administering Certifications and Inquiries</div>
               <div><small>July 2020 - December 2020</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: dealing with classified information along with assisting the front office, by 
+                  providing the customer with a range of different documents and certifications. Monitoring 
+                  control over two bot programs that were responsible for auto generated bank statements as well 
+                  as their distribution.</p>
+              </div>
+            </li>
+            <li>
+              <div><strong>Expressbank</strong></div>
+              <div>Bank Card Consultant</div>
+              <div><small>January 2020 - May 2020</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: aiding customers currently receiving bank cards and providing them with 
+                  information about the bank policies.</p>
+              </div>
             </li>
             <li>
               <div><strong>The University of Hull</strong></div>
               <div>Demonstrator</div>
               <div><small>Feburay 2019 - March 2019</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: helping students currently studying in the university pursuing Computer Science 
+                  degree with their coursework in the field of Networking and UI.</p>
+              </div>
             </li>
             <li>
               <div><strong>UNIQA Bulgaria</strong></div>
               <div>Intern</div>
               <div><small>July 2015 - Aug 2015</small></div>
               <div><small>June 2014 - July 2014</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: customer service, accounting, collection, and information processing.</p>
+              </div>
             </li>
             <li>
               <div><strong>Sisizar</strong></div>
               <div>Intern</div>
               <div><small>January 2015 - March 2015</small></div>
+              <div class="extra-info">
+                <p>Responsibilities: customer service, accounting, collection, and information processing.</p>
+              </div>
             </li>
           </ul>
         </div>
