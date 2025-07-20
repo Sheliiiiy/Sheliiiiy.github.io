@@ -197,6 +197,38 @@
         top: 2rem;
         height: fit-content;
       }
+      body.dark-mode {
+      background: #1e1e1e;
+      color: #f0f0f0;
+      }
+      body.dark-mode .card,
+      body.dark-mode .skills,
+      body.dark-mode .education,
+      body.dark-mode .experiance {
+        background: #2a2a2a;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+      }
+      body.dark-mode .skill-bar {
+        background: #444;
+      }
+      body.dark-mode .skill-fill {
+        background: #bb86fc;
+      }
+      body.dark-mode .experiance ul li {
+        background-color: #333;
+        color: #eee;
+        border-color: #555;
+      }
+      body.dark-mode .experiance ul li:hover {
+        background-color: #bb86fc91;
+        color: #fff;
+      }
+      body.dark-mode .skills .skill-name,
+      body.dark-mode .skills .skill-percent,
+      body.dark-mode .education ul li,
+      body.dark-mode .experiance ul li{
+        color: #ddd;
+      }
     </style>
   </head>
   <body>
@@ -222,6 +254,23 @@
         });
       });
     </script>
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode" style="
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    font-size: 1.5rem;
+    padding: 0.6rem 0.9rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #967b90;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  ">
+    🌙
+  </button>
     <div class="container">
       <div class="left-column">
         <div class="card">
@@ -410,5 +459,22 @@
         </div>
       </div>
     </div>
+    <script>
+      const toggleBtn = document.getElementById('darkModeToggle');
+      const darkModeKey = 'darkModeEnabled';
+    
+      if (localStorage.getItem(darkModeKey) === 'true') {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️';
+      }
+    
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        toggleBtn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem(darkModeKey, isDark);
+      });
+    </script>
+    
   </body>
 </html>
